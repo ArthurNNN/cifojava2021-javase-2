@@ -60,4 +60,12 @@ public class TestPerson {
 		people.add(marc);
 		people.add(jack);
 	}
+
+	private static void printPeople(ArrayList<Person> arrayToPrint) {
+		System.out.println("People:");
+		for (Person personToPrint : arrayToPrint) {
+			System.out.println(personToPrint);
+		}
+		System.out.println("\n");
+	}
 }
