@@ -8,9 +8,9 @@ public class Init {
 				
 				TestPerson.testMethodsObjectsPerson ();
 				
-				TestPerson.testListObjectsPerson();
+//				TestPerson.testListObjectsPerson();
 		
-		System.out.println("Bye, bye my friend...");
+		System.out.println("\nBye, bye my friend...");
 	}
 
 }
