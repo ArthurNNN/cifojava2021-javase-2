@@ -1,5 +1,7 @@
 package personExample;
 
+import java.util.ArrayList;
+
 public class TestPerson {
 	public static void executePerson() {
 		createAndTestObjectsPerson();
@@ -36,13 +38,26 @@ public class TestPerson {
 
 	}
 
-	public static void testMethodsObjectsPerson () {
-		
+	public static void testMethodsObjectsPerson() {
+
 		Person max = new Person("Max", 30, 75, 170, 2500, 8000);
 		Person lisa = new Person("Lisa", 18);
 
 		Person keti = max.haveChild("Keti", 5, lisa);
 
 		System.out.println(keti);
+	}
+
+	public static void testListObjectsPerson() {
+
+		ArrayList<Person> people = new ArrayList<>();
+
+		Person alexa = new Person("Alexa", 25, 60, 170);
+		Person jack = new Person("Alexa", 35);
+		Person marc = new Person();
+
+		people.add(alexa);
+		people.add(marc);
+		people.add(jack);
 	}
 }
