@@ -44,28 +44,26 @@ public class TestPerson {
 		Person lisa = new Person("Lisa", 18, 65, 165, 1200);
 		Person jack = new Person("Jackson Pollock", 35, 80, 180, 8000);
 
-		ArrayList<Double> expensesArr1 = new ArrayList<>();
-		expensesArr1.add(12.43);
-		expensesArr1.add(60.25);
-		expensesArr1.add(300.00);
+		ArrayList<Double> expensesMax = new ArrayList<>();
+		expensesMax.add(12.43);
+		expensesMax.add(60.25);
+		expensesMax.add(300.00);
 
-		ArrayList<Double> expensesArr2 = new ArrayList<>();
-		expensesArr2.add(5.00);
-		expensesArr2.add(62.00);
-		expensesArr2.add(200.00);
+		ArrayList<Double> expensesLisa = new ArrayList<>();
+		expensesLisa.add(5.00);
+		expensesLisa.add(62.00);
+		expensesLisa.add(200.00);
 
-		ArrayList<Double> expensesArr3 = new ArrayList<>();
-		expensesArr3.add(120.00);
-		expensesArr3.add(90.25);
-		expensesArr3.add(1500.00);
+		ArrayList<Double> expensesJack = new ArrayList<>();
+		expensesJack.add(120.00);
+		expensesJack.add(90.25);
+		expensesJack.add(1500.00);
 
-//		Double cashMax = jack.salaryAfterExpenses(expensesArr);
+		max.sportOffer(max.salaryAfterExpenses(expensesMax));
 
-		max.sportOffer(max.salaryAfterExpenses(expensesArr1));
+		lisa.sportOffer(lisa.salaryAfterExpenses(expensesLisa));
 
-		lisa.sportOffer(lisa.salaryAfterExpenses(expensesArr2));
-
-		jack.sportOffer(jack.salaryAfterExpenses(expensesArr3));
+		jack.sportOffer(jack.salaryAfterExpenses(expensesJack));
 
 	}
 

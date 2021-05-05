@@ -38,7 +38,7 @@ public class Person {
 	}
 
 	// Methods from Person Class
-	public double salaryAfterExpenses(ArrayList<Double> expenses) {
+	public double salaryAfterExpenses(ArrayList<Expense> expenses) {
 
 		double salaryMensual = this.basicSalary;
 		double sumExpenses = 0;
