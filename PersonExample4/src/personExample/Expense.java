@@ -1,23 +1,58 @@
 package personExample;
 
 public class Expense {
-	String title;
-	double amount;
-	Boolean isMensual;
+	public String title;
+	public double value;
+	public MyDate date;
+	public Boolean isMensual;
 
 	public Expense() {
 		super();
 	}
+	
+	
 
-	public Expense(double amount) {
-		super();
-		this.amount = amount;
-	}
-
-	public Expense(String title, double amount, Boolean isMensual) {
+	public Expense(String title, double value, MyDate date, Boolean isMensual) {
 		super();
 		this.title = title;
-		this.amount = amount;
+		this.value = value;
+		this.date = date;
+		this.isMensual = isMensual;
+	}
+	
+
+
+
+	public MyDate getDate() {
+		return date;
+	}
+
+
+
+	public void setDate(MyDate date) {
+		this.date = date;
+	}
+
+
+
+	public Expense(String title, double value, MyDate date) {
+		super();
+		this.title = title;
+		this.value = value;
+		this.date = date;
+	}
+
+
+
+	public Expense(double value) {
+		super();
+		this.value = value;
+	}
+
+	public Expense(String title, double value, Boolean isMensual) {
+		super();
+		this.title = title;
+		this.value = value;
 		this.isMensual = isMensual;
 	}
 
@@ -29,12 +64,12 @@ public class Expense {
 		this.title = title;
 	}
 
-	public double getAmount() {
-		return amount;
+	public double getValue() {
+		return value;
 	}
 
-	public void setAmount(double amount) {
-		this.amount = amount;
+	public void setValue(double amount) {
+		this.value = amount;
 	}
 
 	public Boolean getIsMensual() {
@@ -52,7 +87,7 @@ public class Expense {
 //		String s2 =(isMensual ? " euro/month" : " one-time") + " payment";	
 //		System.out.format("%32s%8f%16s", s1, double1, s2);
 //		System.out.println();
-		return "\n" + title + " - " + amount + (isMensual ? " euro/month" : " one-time") + " payment";
+		return "\n" + title + " - " + value + (isMensual ? " euro/month" : " one-time") + " payment";
 	}
 
 }

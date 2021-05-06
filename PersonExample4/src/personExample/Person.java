@@ -10,6 +10,7 @@ public class Person {
 	public int weigth;
 	public int heigth;
 	public double basicSalary;
+	public ArrayList<Expense> expenses;
 
 	// Constructor from Person Class
 	public Person() {
@@ -37,8 +38,18 @@ public class Person {
 		this.basicSalary = basicSalary;
 	}
 
+	public Person(String name, int age, int weigth, int heigth, double basicSalary, ArrayList<Expense> expensesArr) {
+		super();
+		this.name = name;
+		this.age = age;
+		this.weigth = weigth;
+		this.heigth = heigth;
+		this.basicSalary = basicSalary;
+		this.expenses = expensesArr;
+	}
+
 	// Methods from Person Class
-	public double salaryAfterExpenses(ArrayList<Expense> expenses) {
+	public double salaryAfterExpenses() {
 
 		double salaryMensual = this.basicSalary;
 		double sumExpenses = 0;
@@ -46,11 +57,11 @@ public class Person {
 		System.out.println("Client name is " + this.name + ".");
 		System.out.println("Client salary is " + this.basicSalary + ".");
 		System.out.println("\nClient expenses are: " + expenses + ".");
-		for (Expense expense : expenses) {
+		for (Expense expense : this.expenses) {
 			if (expense.getIsMensual()) {
-				sumExpenses = sumExpenses + expense.getAmount();
+				sumExpenses = sumExpenses + expense.getValue();
 			}
-			
+
 		}
 		if (sumExpenses > salaryMensual) {
 			System.out.println("Salary is less than expenses!");
@@ -104,6 +115,15 @@ public class Person {
 		}
 
 		return yearNetSalary;
+	}
+
+	public double calculateExpenses(int month) {
+		double expensesMonth = 0.0;
+		for (Expense expense : this.expenses) {
+			if (expense.getDate().getMonth() == month)
+				expensesMonth = expensesMonth + expense.getValue();
+		}
+		return expensesMonth;
 	}
 
 	// Getters and Setters and toString
