@@ -40,11 +40,13 @@ public class TestPerson {
 
 	public static void testMethodsObjectsPerson() {
 
-		Person max = new Person("Max", 30, 75, 170, 2500.0);
+		Person max = new Person("Max", 30, 75, 170, 2500);
 		Person lisa = new Person("Lisa", 18, 65, 165, 1200);
 		Person jack = new Person("Jackson Pollock", 35, 80, 180, 8000);
 //		
 //
+//		max.expenses.add(new Expense("Vodafone", 14.95, true));
+
 		ArrayList<Expense> expensesMax = new ArrayList<>();
 
 		expensesMax.add(new Expense("Vodafone", 14.95, true));
@@ -92,18 +94,20 @@ public class TestPerson {
 	public static void testExpensesPerson() {
 		Person isa = new Person("Isabel", 18, 180, 60, 3000);
 		System.out.println(isa);
-		
+
 		// option A
 		MyDate mondayMorning = new MyDate(4, 5, 2021);
 		Expense internetYoigoApril = new Expense("Internet 200MB Yoigo", 30, mondayMorning);
 		isa.expenses.add(internetYoigoApril);
+
 		MyDate lastSundayDate = new MyDate(14, 5, 2021);
 		Expense lastSundayFun = new Expense("Bar and drinks and friends", 110, lastSundayDate);
 		isa.expenses.add(lastSundayFun);
+
 		MyDate lastSaturdayDate = new MyDate(14, 6, 2021);
 		Expense lastSaturdayFun = new Expense("Bar and drinks and friends", 110, lastSaturdayDate);
 		isa.expenses.add(lastSaturdayFun);
-		
+
 		// option B
 		isa.expenses.add(new Expense("Internet 200MB Yoigo", 40, new MyDate(1, 5, 2021)));
 		System.out.println("Expenses: " + isa.calculateExpenses(5));

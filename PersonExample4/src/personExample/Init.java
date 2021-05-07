@@ -6,7 +6,10 @@ public class Init {
 		
 				TestPerson.executePerson();
 				
-				TestPerson.testMethodsObjectsPerson ();
+//				TestPerson.testMethodsObjectsPerson ();
+				
+				
+				TestPerson.testExpensesPerson();
 				
 //				TestPerson.testListObjectsPerson();
 				

@@ -36,6 +36,7 @@ public class Person {
 		this.weigth = weigth;
 		this.heigth = heigth;
 		this.basicSalary = basicSalary;
+		this.expenses = new ArrayList<Expense>();
 	}
 
 	public Person(String name, int age, int weigth, int heigth, double basicSalary, ArrayList<Expense> expensesArr) {
