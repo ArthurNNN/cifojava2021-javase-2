@@ -6,12 +6,12 @@ public class Init {
 		
 				TestPerson.executePerson();
 				
-//				TestPerson.testMethodsObjectsPerson ();
+				TestPerson.testMethodsObjectsPerson ();
 				
 				
 				TestPerson.testExpensesPerson();
 				
-//				TestPerson.testListObjectsPerson();
+				TestPerson.testListObjectsPerson();
 				
 		
 		System.out.println("\nBye, bye my friend...");
